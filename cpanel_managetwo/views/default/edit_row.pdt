@@ -1,0 +1,59 @@
+		<?php
+		$url = explode('/', $_SERVER["REQUEST_URI"]);
+		$link_buttons = array(
+			array('name'=>$this->_("CpanelManagetwo.return_to_manage", true), 'attributes'=>array('href'=>$this->base_uri . "settings/company/modules/manage/" .  $url[sizeof($url)-3]  ))
+		);		
+		$this->Widget->clear();
+		$this->Widget->setLinkButtons($link_buttons);
+		$this->Widget->create($this->_("Cpanel.edit_row.box_title", true));
+		?>
+		<div class="inner">
+			<?php
+			$this->Form->create();
+			?>
+			<div class="title_row first">
+				<h3><?php $this->_("Cpanel.edit_row.basic_title");?></h3>
+			</div>
+			<div class="pad">
+				<ul>
+					<li>
+						<?php
+						$this->Form->label($this->_("CpanelManagetwo.row_meta.account_name", true), "account_name");
+						$this->Form->fieldText("account_name", $this->Html->ifSet($vars->account_name));
+						?>
+					</li>
+					<li>
+						<?php
+						$this->Form->label($this->_("CpanelManagetwo.row_meta.user_name", true), "user_name");
+						$this->Form->fieldText("user_name", $this->Html->ifSet($vars->user_name));
+						?>
+					</li>
+					<li>
+						<?php
+						$this->Form->label($this->_("CpanelManagetwo.row_meta.key", true), "key");
+						$this->Form->fieldText("key", $this->Html->ifSet($vars->key));
+						?>
+					</li>
+				</ul>
+			</div>
+			<div class="title_row">
+				<h3><?php $this->_("CpanelManagetwo.add_row.notes_title");?></h3>
+			</div>
+			<div class="pad">
+				<ul>
+					<li>
+						<?php
+						$this->Form->fieldTextarea("notes", $this->Html->ifSet($vars->notes));
+						?>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="button_row"><a class="btn_right submit" href="#"><?php $this->_("CpanelManagetwo.edit_row.add_btn");?></a></div>
+			<?php
+			$this->Form->end();
+			?>
+		</div>
+		<?php
+		$this->Widget->end();
+		?>

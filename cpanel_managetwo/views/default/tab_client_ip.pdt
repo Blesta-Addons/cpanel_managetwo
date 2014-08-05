@@ -1,0 +1,80 @@
+	<h4><?php $this->_("CpanelManagetwo.tab_client_ip.info_title");?></h4>
+	<div class="table-responsive">
+		<table class="table table-curved table-striped">
+			<thead>
+				<tr>
+					<th style="width: 50%;"><?php $this->_("CpanelManagetwo.tab_client_ip.info_heading.field");?></th>
+					<th><?php $this->_("CpanelManagetwo.tab_client_ip.info_heading.value");?></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><?php $this->_("CpanelManagetwo.service_info.licenseid" );?></td>
+					<td><?php $this->Html->_($license_info->licenseid)  ;?></td>
+				</tr>			
+				<tr>
+					<td><?php $this->_("CpanelManagetwo.service_info.adddate" );?></td>
+					<td><?php echo $this->Date->cast($this->Html->ifSet($license_info->adddate)) ;?></td>
+				</tr>
+				<tr>
+					<td><?php $this->_("CpanelManagetwo.service_info.company" );?></td>
+					<td><?php $this->Html->_($license_info->company)  ;?></td>
+				</tr>
+			<?php if($license_info->os) {	?>	
+				<tr>
+					<td><?php $this->_("CpanelManagetwo.service_info.os" );?></td>
+					<td><?php $this->Html->_($license_info->os)  ;?></td>
+				</tr>
+			<?php }	?>	
+			<?php if($license_info->osver) {	?>
+				<tr>					
+					<td><?php $this->_("CpanelManagetwo.service_info.osver" );?></td>
+					<td><?php $this->Html->_($license_info->osver)  ;?></td>
+				</tr>		
+			<?php }	?>				
+			<?php if($license_info->distro) {	?>
+				<tr>
+					<td><?php $this->_("CpanelManagetwo.service_info.distro" );?></td>
+					<td><?php $this->Html->_($license_info->distro)  ;?></td>
+				</tr>
+			<?php }	?>	
+			<?php if($license_info->envtype) {	?>
+				<tr>
+					<td><?php $this->_("CpanelManagetwo.service_info.envtype" );?></td>
+					<td><?php $this->Html->_($license_info->envtype)  ;?></td>
+				</tr>
+			<?php }	?>	
+			<?php if($license_info->version) {	?>	
+				<tr>					
+					<td><?php $this->_("CpanelManagetwo.service_info.version" );?></td>
+					<td><?php $this->Html->_($license_info->version)  ;?></td>
+				</tr>		
+			<?php }	?>			
+			<?php if($license_info->hostname) {	?>
+				<tr>
+					<td><?php $this->_("CpanelManagetwo.service_info.hostname" );?></td>
+					<td><?php $this->Html->_($license_info->hostname)  ;?></td>
+				</tr>
+			<?php }	?>	
+			<?php if($license_info->packageqty) {	?>	
+				<tr>					
+					<td><?php $this->_("CpanelManagetwo.service_info.packageqty" );?></td>
+					<td><?php $this->Html->_($license_info->packageqty)  ;?></td>
+				</tr>					
+			<?php }	?>	
+			<?php if($license_info->isenkompass) {	?>				
+				<tr>	
+					<td><?php $this->_("CpanelManagetwo.service_info.isenkompass" );?></td>
+					<td><?php $this->Html->_($license_info->isenkompass)  ;?></td>
+				</tr>
+			<?php }	?>					
+			<?php if($license_info->maxusers) {	?>				
+				<tr>		
+					<td><?php $this->_("CpanelManagetwo.service_info.maxusers" );?></td>
+					<td><?php $this->Html->_($license_info->maxusers)  ;?></td>
+				</tr>
+			<?php }	?>	
+			
+			</tbody>
+		</table>
+	</div>

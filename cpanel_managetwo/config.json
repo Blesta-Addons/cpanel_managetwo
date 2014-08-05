@@ -1,0 +1,27 @@
+{
+    "version": "1.0.0",
+    "name": "CpanelManagetwo.name",
+    "description": "cPanel Manage2 For cPanel licenses provisioning .",
+	"authors": [
+		{
+			"name": "Mohamed Anouar Achoukhy  ",
+			"url": "http://www.naja7host.com"
+		},
+        {
+			"name": ".:Support us donate by PayPal:. ",
+			"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2FQKWFL73CV9N"
+		}
+	],
+    "service": {
+        "name_key": "manage2_ipaddress"
+    },
+    "module": {
+        "row": "CpanelManagetwo.module_row.name",
+        "rows": "CpanelManagetwo.module_rows.name",
+        "group": "CpanelManagetwo.module_group.name",
+        "row_key": "user_name"
+    },
+    "package": {
+        "name_key": "license_type"
+    }
+}
